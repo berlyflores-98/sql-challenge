@@ -31,3 +31,8 @@ from department as d
 join dept_emp as de on d.dept_no = de.dept_no
 join employees as e on e.emp_no = de.emp_no
 where d.dept_name = 'Sales' OR d.dept_name = 'Development';
+
+select last_name, COUNT(last_name) as LAST_NAME_COUNT
+from employees 
+group by last_name
+order by LAST_NAME_COUNT desc;
